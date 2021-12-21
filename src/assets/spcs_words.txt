@@ -1,0 +1,411 @@
+accelerando
+adagio
+accent
+Aeolian mode
+allegretto
+allegro
+andante
+andantino
+animato
+arioso
+arpeggio
+bar
+bass
+beat
+blues
+breath mark
+cadence
+canon
+cantabile
+chord
+chromatic scale
+circle of fifths
+clef
+coda
+con brio
+counterpoint
+crescendo
+crotchet
+da capo
+decrescendo
+demisemiquaver
+diatonic
+diminuendo
+dissonance
+dolce
+dominant
+Dorian mode
+dynamics
+eighth note
+eighth rest
+espressivo
+fermata
+fifth
+fine
+flag
+flat
+forte
+fortissimo
+forzando
+fourth
+fugue
+furioso
+grandioso
+grave
+half note
+half step
+harmonic major
+harmonic minor
+harmonics
+harmony
+hemidemisemiquaver
+interval
+intonation
+invention
+Ionian mode
+jazz
+key
+key signature
+largo
+ledger line
+legato
+lento
+libretto
+Locrian mode
+major
+major third
+marcato
+measure
+melodic minor
+melody
+meter
+mezzo forte
+mezzo piano
+minim
+minor
+minor third
+Mixolydian mode
+moderato
+modulation
+molto
+music
+natural
+natural minor
+notation
+octatonic
+octave
+opera
+ornament
+overtone
+pentatonic
+pentatonic scale
+pesante
+phrase
+Phrygian mode
+play
+pianissimo
+piano
+pitch
+pizzicato
+poco a poco
+polyphony
+prestissimo
+presto
+quarter note
+quarter rest
+quaver
+quaver rest
+rallentando
+repeat
+religioso
+rest
+rhythm
+ritard
+rock and roll
+rubato
+scale
+semiquaver
+semplice
+sempre
+scherzando
+scherzo
+segno
+sequence
+sforzando
+sharp
+simile
+sixteenth note
+sixty-fourth note
+slur
+sonata
+sostenuto
+sotto voce
+staccato
+staff
+stave
+stem
+subdominant
+subito
+supertonic
+symphony
+syncopation
+tablature
+tempo
+tenuto
+theme
+theory
+thirty-second note
+tie
+timbre
+time signature
+tonic
+tranquillo
+transposition
+treble
+triad
+trill
+triplets
+tritone
+vibrato
+vivace
+whole note
+whole rest
+whole step
+whole tone scale
+accordion
+acoustic guitar
+Aeolian harp
+Alphorn
+alto saxophone
+anvil
+baby grand piano
+bagpipe
+balalaika
+bandoneón
+bandura
+banjo
+baritone horn
+bass
+bass clarinet
+bass drum
+bass guitar
+bassoon
+bell
+bongo drum
+bouzouki
+bow
+brass instruments
+bugle
+calliope
+carillon
+castanets
+celesta
+cello
+Celtic harp
+chimes
+cimbalom
+clarinet
+classical guitar
+clavichord
+clavier
+concertina
+conch
+conga drum
+contrabass
+cornet
+cowbell
+cymbals
+didgeridoo
+double bass
+drum
+drumsticks
+dulcimer
+electric guitar
+electric organ
+English horn
+euphonium
+fiddle
+fife
+flugelhorn
+flute
+French horn
+glockenspiel
+gong
+grand piano
+guitar
+hammered dulcimer
+harmonica
+harmonium
+harp
+harpsichord
+helicon
+horn
+hurdy gurdy
+instrument
+jaw harp
+Jew's harp
+kazoo
+kettledrum
+keyboard
+lute
+lyre
+mallets
+mandolin
+maracas
+marimba
+mellophone
+melodeon
+moog synthesizer
+musical instruments
+musical saw
+mute
+oboe
+ocarina
+organ
+pan pipes
+penny whistle
+percussion
+piano
+piccolo
+pipa
+pipe organ
+player piano
+pump organ
+rainstick
+rattle
+recorder
+reed
+saw
+saxophone
+sitar
+slide whistle
+snare drum
+spinet
+spoons
+steel drum
+sousaphone
+steel drum
+steel guitar
+string bass
+string instruments
+strings
+synthesizer
+tabla
+tambourine
+theramin
+thumb piano
+timpani
+tin whistle
+tom-tom drum
+triangle
+trombone
+trumpet
+tuba
+tubular bells
+ukulele
+upright piano
+valve
+vibraphone
+viola
+viola da gamba
+violin
+violincello
+vuvuzela
+Wagner tuba
+washboard
+whistle
+wind chime
+wind instruments
+woodwind instruments
+xylophone
+zither
+astrophysics
+astronomy
+atom
+beaker
+biochemistry
+biology
+botany
+Bunsen burner
+burette
+cell
+chemical
+chemistry
+climate
+climatologist
+control
+cuvette
+data
+datum
+electricity
+electrochemist
+element
+energy
+entomology
+evolution
+experiment
+fact
+flask
+fossil
+funnel
+genetics
+geology
+geophysics
+glassware
+graduated cylinder
+gravity
+herpetology
+hypothesis
+ichthyology
+immunology
+lab
+laboratory
+laws
+lepidoptery
+magnetism
+mass
+matter
+measure
+meteorologist
+meteorology
+microbiologist
+microbiology
+microscope
+mineral
+mineralogy
+molecule
+motion
+observe
+observatory
+organism
+ornithology
+paleontology
+particle
+Petri dish
+phase
+physical science
+physics
+pipette
+quantum mechanics
+radiology
+research
+retort
+scale
+science
+scientist
+seismology
+telescope
+temperature
+test tube
+theory
+thermometer
+tissue
+variable
+virologist
+volcanology
+volume
+volumetric flask
+watch glass
+weather
+weigh
+zoology

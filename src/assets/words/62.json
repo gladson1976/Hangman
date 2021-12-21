@@ -1,0 +1,273 @@
+{
+  "words_hor": [
+    {
+      "word": "fountain",
+      "x": 0,
+      "y": 0,
+      "id": 1,
+      "info": "Artificially produced jet of water",
+      "savedValue": "FOUNTAIN",
+      "desc": "Artificially produced jet of water",
+      "meta": "        "
+    },
+    {
+      "word": "lava",
+      "x": 9,
+      "y": 0,
+      "id": 5,
+      "info": "Molten rock",
+      "savedValue": "LAVA",
+      "desc": "Molten rock",
+      "meta": "    "
+    },
+    {
+      "word": "subjects",
+      "x": 0,
+      "y": 2,
+      "id": 8,
+      "info": "Things being discussed",
+      "savedValue": "SUBJECTS",
+      "desc": "Things being discussed",
+      "meta": "        "
+    },
+    {
+      "word": "operate",
+      "x": 6,
+      "y": 3,
+      "id": 10,
+      "info": "Conduct work",
+      "savedValue": "OPERATE",
+      "desc": "Conduct work",
+      "meta": "       "
+    },
+    {
+      "word": "event",
+      "x": 0,
+      "y": 4,
+      "id": 11,
+      "info": "Consequence",
+      "savedValue": "EVENT",
+      "desc": "Consequence",
+      "meta": "     "
+    },
+    {
+      "word": "youngster",
+      "x": 4,
+      "y": 5,
+      "id": 12,
+      "info": "Child",
+      "savedValue": "YOUNGSTER",
+      "desc": "Child",
+      "meta": "         "
+    },
+    {
+      "word": "traveller",
+      "x": 0,
+      "y": 7,
+      "id": 15,
+      "info": "Person who changes location",
+      "savedValue": "TRAVELLER",
+      "desc": "Person who changes location",
+      "meta": "         "
+    },
+    {
+      "word": "arete",
+      "x": 8,
+      "y": 8,
+      "id": 18,
+      "info": "Sharp, narrow ridge found in rugged mountains",
+      "savedValue": "ARETE",
+      "desc": "Sharp, narrow ridge found in rugged mountains",
+      "meta": "     "
+    },
+    {
+      "word": "tagline",
+      "x": 0,
+      "y": 9,
+      "id": 19,
+      "info": "Point of a joke (3,4)",
+      "savedValue": "TAGLINE",
+      "desc": "Point of a joke (3,4)",
+      "meta": "       "
+    },
+    {
+      "word": "gritting",
+      "x": 5,
+      "y": 10,
+      "id": 22,
+      "info": "Clenching together, as with teeth",
+      "savedValue": "GRITTING",
+      "desc": "Clenching together, as with teeth",
+      "meta": "        "
+    },
+    {
+      "word": "safe",
+      "x": 0,
+      "y": 12,
+      "id": 23,
+      "info": "Free from danger",
+      "savedValue": "SAFE",
+      "desc": "Free from danger",
+      "meta": "    "
+    },
+    {
+      "word": "reversed",
+      "x": 5,
+      "y": 12,
+      "id": 24,
+      "info": "Went back",
+      "savedValue": "REVERSED",
+      "desc": "Went back",
+      "meta": "        "
+    }
+  ],
+  "words_ver": [
+    {
+      "word": "fished",
+      "x": 0,
+      "y": 0,
+      "id": 1,
+      "info": "Used a rod and bait",
+      "savedValue": "FISHED",
+      "desc": "Used a rod and bait",
+      "meta": "      "
+    },
+    {
+      "word": "umbrella",
+      "x": 2,
+      "y": 0,
+      "id": 2,
+      "info": "Lightweight handheld collapsible canopy",
+      "savedValue": "UMBRELLA",
+      "desc": "Lightweight handheld collapsible canopy",
+      "meta": "        "
+    },
+    {
+      "word": "twenty",
+      "x": 4,
+      "y": 0,
+      "id": 3,
+      "info": "Number denoting a score",
+      "savedValue": "TWENTY",
+      "desc": "Number denoting a score",
+      "meta": "      "
+    },
+    {
+      "word": "into",
+      "x": 6,
+      "y": 0,
+      "id": 4,
+      "info": "Keen on",
+      "savedValue": "INTO",
+      "desc": "Keen on",
+      "meta": "    "
+    },
+    {
+      "word": "asia",
+      "x": 10,
+      "y": 0,
+      "id": 6,
+      "info": "Continent",
+      "savedValue": "ASIA",
+      "desc": "Continent",
+      "meta": "    "
+    },
+    {
+      "word": "appear",
+      "x": 12,
+      "y": 0,
+      "id": 7,
+      "info": "Materialise",
+      "savedValue": "APPEAR",
+      "desc": "Materialise",
+      "meta": "      "
+    },
+    {
+      "word": "sponge",
+      "x": 7,
+      "y": 2,
+      "id": 9,
+      "info": "Primitive multicellular marine animal",
+      "savedValue": "SPONGE",
+      "desc": "Primitive multicellular marine animal",
+      "meta": "      "
+    },
+    {
+      "word": "oblong",
+      "x": 5,
+      "y": 5,
+      "id": 13,
+      "info": "Two-dimensional figure",
+      "savedValue": "OBLONG",
+      "desc": "Two-dimensional figure",
+      "meta": "      "
+    },
+    {
+      "word": "tiberius",
+      "x": 10,
+      "y": 5,
+      "id": 14,
+      "info": "Son-in-law of Augustus who was Emperor of Rome (42 BC to AD 37)",
+      "savedValue": "TIBERIUS",
+      "desc": "Son-in-law of Augustus who was Emperor of Rome (42 BC to AD 37)",
+      "meta": "        "
+    },
+    {
+      "word": "titles",
+      "x": 0,
+      "y": 7,
+      "id": 15,
+      "info": "Names of literary compositions",
+      "savedValue": "TITLES",
+      "desc": "Names of literary compositions",
+      "meta": "      "
+    },
+    {
+      "word": "rattle",
+      "x": 8,
+      "y": 7,
+      "id": 16,
+      "info": "Baby's plaything",
+      "savedValue": "RATTLE",
+      "desc": "Baby's plaything",
+      "meta": "      "
+    },
+    {
+      "word": "begged",
+      "x": 12,
+      "y": 7,
+      "id": 17,
+      "info": "Pleaded",
+      "savedValue": "BEGGED",
+      "desc": "Pleaded",
+      "meta": "      "
+    },
+    {
+      "word": "golf",
+      "x": 2,
+      "y": 9,
+      "id": 20,
+      "info": "Ball game played on a course",
+      "savedValue": "GOLF",
+      "desc": "Ball game played on a course",
+      "meta": "    "
+    },
+    {
+      "word": "erie",
+      "x": 6,
+      "y": 9,
+      "id": 21,
+      "info": "Fourth largest of the Great Lakes",
+      "savedValue": "ERIE",
+      "desc": "Fourth largest of the Great Lakes",
+      "meta": "    "
+    }
+  ],
+  "hints": 0,
+  "isNew": false,
+  "isSolved": true,
+  "name": "62",
+  "percentage": 100,
+  "seconds": 554,
+  "solvedCount": 26
+}

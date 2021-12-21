@@ -1,0 +1,28 @@
+point	A specific position in space.
+line	A straight set of points.
+plane	A flat surface.
+angle	The space between two intersecting lines or rays.
+apex	The topmost point.
+base	The bottom of a figure.
+degree	A unit for measuring angles.
+vertex	The point where two lines meet; a corner.
+acute angle	An angle which is less than 90 degrees.
+obtuse angle	An angle which is greater than 90 degrees.
+right angle	An angle which is exactly 90 degrees.
+bisect	To divide an angle into two equal parts.
+congruent	Equal.
+intersection	The point where two lines cross.
+symmetry	Describes when a figure has exactly the same parts on either side of a line.
+line of symmetry	The line which divides a figure such that on either side of the line, parts of the figure are exactly the same.
+parallel	Describes two lines which are equally distant from each other at every point.
+perpendicular	Describes when the angle between two lines or planes is a right angle.
+quadrilateral	Any four-sided figure.
+trapezoid	A quadrilateral in which exactly two sides are parallel.
+parallelogram	A quadrilateral in which opposite sides are parallel to each other.
+rhombus	A parallelogram in which every side is equal.
+square	A parallelogram in which every side is equal and every angle is a right angle.
+rectangle	A parallelogram in which every angle is a right angle.
+triangle	Any three-sided figure.
+isosceles triangle	A triangle in which two sides and two angles are equal.
+equilateral triangle	A triangle in which all three sides and all three angles are equal.
+scalene triangle	A triangle in which no sides or angles are equal.
