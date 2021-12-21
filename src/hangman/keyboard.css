@@ -1,0 +1,66 @@
+.keyboard-container {
+	display: block;
+	border: 0px solid black;
+	width: 100%;
+	height: 100px;
+	padding:0px;
+	text-align: left;
+}
+.keyboard {
+	display: block;
+	border: 0px solid black;
+	width: 100%;
+	height: 100%;
+	padding:0px;
+	text-align: center;
+}
+.keyboard-row {
+	display: inline-block;
+	margin-bottom: 1vw;
+	height: 10vw;
+	width: 94vw;
+	vertical-align: middle;
+}
+.keyboard-keys {
+	display: inline-block;
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 1vw;
+	cursor: pointer;
+	width: 8vw;
+	/* height: 10vw; */
+	line-height: 10vw;
+	font-size: larger;
+	font-weight: bold;
+	margin: 0 0.5vw;
+}
+.space-key {
+	width: 60%;
+}
+.delete-key {
+	width: 14%;
+}
+.delete-key:before {
+	content:'\2190';
+}
+.burger-key:before {
+	content:'\2630';
+}			
+.spacer-key-quarter {
+	width: 1.75%;
+	border: 0px;
+}
+.spacer-key-half {
+	width: 3.5%;
+	border: 0px;
+}
+.spacer-key-full {
+	width: 7%;
+	border: 0px;
+}
+.disabled {
+	pointer-events: none;
+	cursor: not-allowed;
+	background-color: lightgrey;
+}

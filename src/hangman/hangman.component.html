@@ -1,0 +1,209 @@
+<div class="burst-12" *ngIf="newHighscore" (click)="this.newHighscore = false"></div>
+<div class="hangman-title title-border">
+  <table class="hangman-title">
+    <tr>
+      <td class="title">
+        <span>{{appTitle}}</span>
+      </td>
+      <td class="title text-right">
+        <span class="fa fa-refresh title-button cursor-pointer" (click)="startNewHangman()"></span>
+        <span class="fa fa-gears title-button cursor-pointer" (click)="showSettings()"></span>
+        <span class="fa fa-bar-chart title-button cursor-pointer" (click)="showHighscore()"></span>
+        <span class="fa fa-question title-button cursor-pointer" (click)="showHelp()"></span>
+        <!-- <span class="fa fa-search title-button cursor-pointer" (click)="readJSON()"></span> -->
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="hangman-title" style="margin-top: 8vh;">
+  <table class="hangman-title">
+    <tr>
+      <td rowspan="2" class="hangman-image portrait-{{hangPortrait}}" [ngClass]="{'background-red': hangmanLost, 'flash-clear': !hangmanLost && hangmanComplete}">
+        <span>{{hangmanMessage}}</span>
+      </td>
+      <td class="hangman-message text-right">
+        <span>{{hangmanMoves}} / {{maxMoves}}</span>&nbsp;&nbsp;<span class="fa fa-pencil"></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="hangman-message text-right">
+        <span>{{clueCount}}</span>&nbsp;&nbsp;<span class="fa fa-star"></span>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="hangman-container">
+  <div class="font-normal font-bold hangman-hint">
+    {{currentHint}}
+  </div>
+  <div>
+    <table class="hangman-container" [style.width]="hangmanTableSize">
+      <tr>
+        <td class="text-center hangman" *ngFor="let c of arrCurrentWord; let i = index" [style.width]="hangmanCellSize" [ngClass]="{'flash-clear': flashNewWord || i === clueIndex}">
+          {{c === '' ? '&nbsp;' : c}}
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- <div *ngFor="let c of arrCurrentWord" class="hangman" [style.width]="hangmanCellSize">{{c}}</div> -->
+</div>
+<div class="hangman-footer">
+	<div class="keyboard-container">
+		<div class="keyboard">
+			<div class="keyboard-row" *ngFor="let row of arrKeys; let i = index">
+				<div class="keyboard-keys"
+					*ngFor="let key of row; let j = index"
+          [ngClass]="{'delete-key': key === '*BKSPC', 'space-key': key === '*SPACE', 'burger-key': key === '*MENU', 'fa fa-star': key === '*HINT', 'spacer-key-quarter': key === '#Q',
+            'spacer-key-half': key === '#H', 'disabled': (usedLetters.includes(key) || (key === '*HINT' && clueCount === 0))}"
+          (click)="getKeyChar(i, j)">
+          {{key == '*BKSPC' || key === '*MENU' ? '' : (key === '*HINT' ? '' : (key[0] === '#' ? '&nbsp;' : (key === '*SPACE' ? 'New Word' : key)))}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<ng-template #popupSettings let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">{{appTitle}} - Options</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <table class="settings-table">
+      <tr>
+        <td>Difficulty</td>
+        <td class="text-right">
+          <div ngbDropdown class="d-inline-block" placement="bottom-right">
+            <button type="button" class="btn btn-sm btn-white" id="gridDropdown" ngbDropdownToggle>
+              <span>{{arrDifficulty[selectedDifficulty].difficultyName}}</span>
+              <span class="font-small">({{arrDifficulty[selectedDifficulty].minWordSize}} - {{arrDifficulty[selectedDifficulty].maxWordSize === 0 ? '&infin;' : arrDifficulty[selectedDifficulty].maxWordSize}} / {{arrDifficulty[selectedDifficulty].maxMoves}} / {{arrDifficulty[selectedDifficulty].clueCount}})</span>
+            </button>
+            <div ngbDropdownMenu aria-labelledby="gridDropdown">
+              <div class="dropdown-item" href="#" *ngFor="let difficulty of arrDifficulty; let i = index" (click)="setDifficulty(i)">
+                <span class="hangman-font text-left cursor-pointer" (click)="setDifficulty(i)">{{difficulty.difficultyName}}</span>
+                <span class="font-small text-right">({{difficulty.minWordSize}} - {{difficulty.maxWordSize === 0 ? '&infin;' : difficulty.maxWordSize}} / {{difficulty.maxMoves}} / {{difficulty.clueCount}})</span>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <!-- <tr>
+        <td>Borders</td>
+        <td class="text-right va-middle">
+          <input type="checkbox" name="borders" id="borders" [(ngModel)]="display.hangmanBorders" [value]="true" (change)="setBorders()">
+        </td>
+      </tr>
+      <tr>
+        <td class="va-top">Palette</td>
+        <td class="text-right">
+          <div ngbDropdown class="d-inline-block" placement="bottom-right">
+            <button type="button" class="btn btn-sm btn-white text-right" id="paletteDropdown" ngbDropdownToggle>
+              <span class="palette">
+                {{hangmanPalette[selectedPalette].name}}
+                <br>
+                <span *ngFor="let color of hangmanPalette[selectedPalette].colours" class="va-t-bottom cell-color" [style.background-color]="color"></span>
+              </span>
+            </button>
+            <div ngbDropdownMenu aria-labelledby="paletteDropdown" class="scrollable-menu">
+              <div class="dropdown-item" href="#" *ngFor="let palette of hangmanPalette; let i = index" (click)="setPalette(i)">
+                <div class="hangman-font text-left cursor-pointer w-50 inline-block">{{palette.name}}</div>
+                <div class="palette font-small text-right w-50 inline-block">
+                  <span *ngFor="let color of palette.colours" class="cell-color cursor-pointer" [style.background-color]="color"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr> -->
+    </table>
+  </div>
+</ng-template>
+
+<ng-template #popupConfirm let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">{{appTitle}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    {{hangmanPopupMessage}}
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-primary" (click)="c('Y')">Yes</button>
+    <button type="button" class="btn btn-outline-secondary" (click)="d('N')">No</button>
+  </div>
+</ng-template>
+
+<ng-template #popupHighscore let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">{{appTitle}} - Stats</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <table class="settings-table">
+      <tr class="text-center font-bold">
+        <td class="text-left">Board Size</td>
+        <!-- <td>Best Score</td> -->
+        <td>Won</td>
+        <td>Played</td>
+      </tr>
+      <tr class="text-center" *ngFor="let highscore of arrDifficulty; let i = index">
+        <td class="text-left font-bold">{{highscore.difficultyName}}</td>
+        <!-- <td>{{persistData.hangmanStats.scores[i]}}</td> -->
+        <td>{{persistData.hangmanStats.won[i]}}</td>
+        <td>{{persistData.hangmanStats.played[i]}}</td>
+      </tr>
+      <tr>
+        <td colspan="4" class="text-right p-top-10">
+          <button type="button" class="btn btn-outline-danger" (click)="resetStats()">Reset Stats</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</ng-template>
+
+<ng-template #popupHelp let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">{{appTitle}} - Info</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <table class="settings-table">
+      <tr>
+        <td>
+          <div class="font-bold">{{appTitle}} v{{appVersion}}</div>
+          <div>Developed by</div>
+          <div>Prabhu Thomas</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="font-bold">Objective and Instructions</div>
+          <ul class="list-unstyled">
+            <li>Hangman is a word guessing game where the player tries to identify a selected word within a certain number of chances using the clues provided.</li>
+            <li>&nbsp;</li>
+            <li class="font-bold">Gameplay</li>
+            <li>The word to guess is represented by a row of dashes, representing each letter of the word.</li>
+            <li>A set of clues are provided which identify the selected word.</li>
+            <li>If a letter which occurs in the word is suggested, it is written in all its correct positions. If the suggested letter does not occur in the word, one element of a hanged man stick figure is drawn.</li>
+            <li>You win by identifying all the letters that appears in the word, thereby completing the word, before the diagram is completed.</li>
+            <li>If you make enough incorrect guesses to complete the diagram, the game is over and you lose.</li>
+          </ul>
+        </td>
+      </tr>
+      <!-- <tr>
+        <td colspan="4" class="text-right p-top-10">
+          <button type="button" class="btn btn-outline-primary" (click)="showTutorial()">Tutorial</button>
+        </td>
+      </tr> -->
+    </table>
+  </div>
+</ng-template>
+
